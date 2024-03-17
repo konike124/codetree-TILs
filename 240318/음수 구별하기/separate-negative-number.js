@@ -1,7 +1,5 @@
-const fs = require('fs')
-let input = fs.readFileSync(0).toString().trim()
-let a = Number(input)
+const fs = require("fs");
+let n = Number(fs.readFileSync(0).toString().trim());
 
-console.log(a)
-if (input[0] === "-" && a < 0)
-    console.log('minus')
+console.log(n);
+if (n < 0) console.log("minus");
