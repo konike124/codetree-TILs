@@ -7,5 +7,5 @@ if (a >=80) {
     console.log("pass");
 }
 else {
-    consol.log(`${(80-a)}more score`);
+    consol.log(`${('80'-a)}more score`);
 }
