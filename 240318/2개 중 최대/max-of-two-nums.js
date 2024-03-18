@@ -1,6 +1,6 @@
 const fs = require("fs");
 let input = fs.readFileSync(0).toString().trim().split(" ");
-let a = Number(input[0])
-let b = Number(input[1])
-let n
-n = (a < b) ? console.log(b) : console.log(a);
+let a = Number(input[0]);
+let b = Number(input[1]); 
+let max = (a < b) ? b : a;
+console.log(max);
