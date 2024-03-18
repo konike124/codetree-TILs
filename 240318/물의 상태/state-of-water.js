@@ -5,4 +5,4 @@ if (water < 0) console.log('ice')
 
 else if (water >= 100) console.log('vapor')
 
-else console.log(water)
+else console.log('water')
