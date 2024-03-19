@@ -11,5 +11,5 @@ else if (a >= 500) {
     console.log('pen')
 }
 else {
-    console.log('No')
+    console.log('no')
 }
