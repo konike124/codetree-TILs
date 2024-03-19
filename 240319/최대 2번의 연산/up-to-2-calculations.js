@@ -1,6 +1,5 @@
 const fs = require('fs');
 let a = Number(fs.readFileSync(0).toString().trim());
-let result
 
 if (a % 2 === 0) {
     a/=2;
