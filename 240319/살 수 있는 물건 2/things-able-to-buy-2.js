@@ -5,7 +5,7 @@ if (a >= 3000) {
     console.log('book')
 }
 else if (a >= 1000) {
-     console.log('mask')
+    console.log('mask')
 }
 else if (a >= 500) {
     console.log('pen')
