@@ -13,5 +13,5 @@ if (a % 5 === 0) {
     console.log('YES')
 }
 else {
-    cosnole.log('NO')
+    console.log('NO')
 }
