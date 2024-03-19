@@ -9,7 +9,7 @@ else if (a % 2 === 1) {
     result=(a+1)/2
 }
 
-if (result % 2 === 1) {
+if (a % 2 === 0 & result % 2 === 1) {
     result = (result+1)/2
 }
 console.log(result);
