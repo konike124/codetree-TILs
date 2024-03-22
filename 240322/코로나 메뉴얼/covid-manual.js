@@ -11,24 +11,12 @@ temperature1 = Number(temperature1);
 temperature2 = Number(temperature2);
 temperature3 = Number(temperature3);
 
-if (symptom1 === "Y") {
-    if (temperature1 >= 37) {
-        if (symptom2 === "Y" || symptom3 === "Y" || temperature2 >= 37 || temperature3 >= 37) {
-            result = "E";
-        } else {
-            result = "A";
-        }
-    } else {
-        result = "C";
-    }
+if ((symptom1 === "Y" && temperature1 >= 37) || (symptom2 === "Y" && temperature2 >= 37) || (symptom3 === "Y" && temperature3 >= 37)) {
+    result = "E";
+} else if (symptom1 === "Y" || symptom2 === "Y" || symptom3 === "Y") {
+    result = "C";
 } else {
-    if (temperature1 >= 37 && (symptom2 === "Y" || symptom3 === "Y" || temperature2 >= 37 || temperature3 >= 37)) {
-        result = "B";
-    } else if (symptom2 === "Y" || symptom3 === "Y" || temperature2 >= 37 || temperature3 >= 37) {
-        result = "C";
-    } else {
-        result = "D";
-    }
+    result = "N";
 }
 
 console.log(result);
