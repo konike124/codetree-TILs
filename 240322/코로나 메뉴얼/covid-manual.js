@@ -27,6 +27,5 @@ if (symptom3 === "Y" && temperature3 >= 37) {
 if (countA >= 2) {
     result = "E";
 }
-else result='N'
 
 console.log(result);
