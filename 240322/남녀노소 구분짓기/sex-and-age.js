@@ -9,7 +9,8 @@ if (a === 0) {
     } else {
         console.log("BOY");
     }
-} else {
+}
+else {
     if (b >= 19) {
         console.log("WOMAN");
     } else {
