@@ -10,4 +10,6 @@ if (a>=b && a>=c ) {
     else if (b>=a && b>=c) {
         console.log(b)
     }
-    else console.log(c)
+    else {
+        console.log(c)
+    }
