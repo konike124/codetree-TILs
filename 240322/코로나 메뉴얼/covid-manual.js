@@ -13,39 +13,21 @@ temperature3 = Number(temperature3);
 
 if (symptom1 === "Y") {
     if (temperature1 >= 37) {
-        result = "A";
-    } else {
-        if (symptom2 === "Y") {
-            if (temperature2 >= 37 || (symptom3 === "Y" && temperature3 >= 37)) {
-                result = "E";
-            } else {
-                result = "N";
-            }
+        if (symptom2 === "Y" || symptom3 === "Y" || temperature2 >= 37 || temperature3 >= 37) {
+            result = "E";
         } else {
-            if (temperature2 >= 37 && temperature3 >= 37) {
-                result = "E";
-            } else {
-                result = "N";
-            }
+            result = "A";
         }
+    } else {
+        result = "C";
     }
 } else {
-    if (symptom2 === "Y") {
-        if (temperature2 >= 37) {
-            result = "B";
-        } else {
-            if (symptom3 === "Y" && temperature3 >= 37) {
-                result = "C";
-            } else {
-                result = "D";
-            }
-        }
+    if (temperature1 >= 37 && (symptom2 === "Y" || symptom3 === "Y" || temperature2 >= 37 || temperature3 >= 37)) {
+        result = "B";
+    } else if (symptom2 === "Y" || symptom3 === "Y" || temperature2 >= 37 || temperature3 >= 37) {
+        result = "C";
     } else {
-        if (temperature2 >= 37 && temperature3 >= 37) {
-            result = "C";
-        } else {
-            result = "D";
-        }
+        result = "D";
     }
 }
 
