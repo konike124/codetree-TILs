@@ -15,24 +15,37 @@ if (symptom1 === "Y") {
     if (temperature1 >= 37) {
         result = "A";
     } else {
-        result = "C";
+        if (symptom2 === "Y") {
+            if (temperature2 >= 37 || (symptom3 === "Y" && temperature3 >= 37)) {
+                result = "E";
+            } else {
+                result = "N";
+            }
+        } else {
+            if (temperature2 >= 37 && temperature3 >= 37) {
+                result = "E";
+            } else {
+                result = "N";
+            }
+        }
     }
-} else { // 증상이 없는 경우
-    if (temperature1 >= 37) {
-        result = "B";
+} else {
+    if (symptom2 === "Y") {
+        if (temperature2 >= 37) {
+            result = "B";
+        } else {
+            if (symptom3 === "Y" && temperature3 >= 37) {
+                result = "C";
+            } else {
+                result = "D";
+            }
+        }
     } else {
-        result = "D";
-    }
-}
-
-// A일 경우 E 여부 확인
-if (result === "A") {
-    if (symptom2 === "Y" && temperature2 >= 37) {
-        result = "E";
-    } else if (symptom3 === "Y" && temperature3 >= 37) {
-        result = "E";
-    } else {
-        result = "N";
+        if (temperature2 >= 37 && temperature3 >= 37) {
+            result = "C";
+        } else {
+            result = "D";
+        }
     }
 }
 
