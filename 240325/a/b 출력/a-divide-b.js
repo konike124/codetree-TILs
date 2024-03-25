@@ -5,10 +5,11 @@ let input = fs.readFileSync(0, 'utf-8').trim().split(" ");
 let [a, b] = input.map(Number);
 
 // 결과 문자열 초기화
-let result = "0.";
+let result = "";
 
 // 처음 나머지 초기화
 let remainder = a % b;
+result += Math.floor(a / b) + ".";
 
 // 소수점 이하 숫자 계산
 for (let i = 0; i < 20; i++) {
