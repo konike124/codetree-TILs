@@ -6,20 +6,18 @@ let [a, b] = input.map(Number);
 
 // 결과 문자열 초기화
 let result = "";
-result=parseInt(a/b)+"."
 
-//a 나누기 b의 몫을 구하고 일단
-//그다음에 구한 나머지*10을 b로 나누는 작업을 20번 반복
-a %= b;
-for (let i = 0; i < 20; i++) {
-    // 나머지에 10 곱한 값을 기준으로
-    // b로 나누었을 떄의 몫을 구해줍니다.
-    a *= 10;
-    result += parseInt(a / b);
+// 처음 나머지 초기화
+let remainder=(a%b);
+result+=Math.floor(a/b)+'.'
 
-    // a를 b로 나눈 나머지를 게속 갱신해줍니다.
-    a %= b;
+// 소수점 이하 숫자 계산
+for (i=0; i<20; i++) {
+    remainder*=10;
+    let quotient=Math.floor(remainder/b)
+    result+=quotient // 결과에 몫을 추가
+    remainder %= b // 나머지를 다시 갱신
 }
 
-// 출력
+// 결과 출력
 console.log(result);
