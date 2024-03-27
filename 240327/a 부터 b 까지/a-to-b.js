@@ -18,3 +18,5 @@ for (let i=a; i<=b;) {
     }
 }
 console.log(result)
+
+//해설은 치사하게 while문으로 풀었다
