@@ -14,7 +14,7 @@ if ( c === "A") {
 
 if ( c === "D") {
     for (let i = n; i >= 1; i--) {
-        result=i+" "
+        result+=i+" "
     }
     console.log(result)
 }
