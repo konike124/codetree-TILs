@@ -8,13 +8,11 @@ if ( c === "A") {
         result+=i+" "
         
     }
-    console.log(result)
 }
-
 
 if ( c === "D") {
     for (let i = n; i >= 1; i--) {
         result+=i+" "
     }
-    console.log(result)
 }
+console.log(result)
