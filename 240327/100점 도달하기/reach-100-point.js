@@ -10,7 +10,7 @@ for (let i=n; i<=100; i++) {
         result+='B'+" "
     }
     else if (i>=70) {
-        result+='c'+" "    
+        result+='C'+" "    
     }
     else if (i>=60) {
         result+='D'+" "
